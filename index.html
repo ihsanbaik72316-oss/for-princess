@@ -1,135 +1,239 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Princess 👑</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Princess Lembayung 👑</title>
 
-<style>
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:linear-gradient(135deg,#ffd6e7,#fff7fb);
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-overflow:hidden;
-}
+    <link rel="stylesheet" href="style.css">
 
-.card{
-background:white;
-padding:30px;
-border-radius:20px;
-width:90%;
-max-width:450px;
-text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,.15);
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-h1{
-color:#ff5c8a;
-}
-
-input{
-padding:12px;
-width:80%;
-border-radius:10px;
-border:2px solid #ffc2d7;
-margin:15px 0;
-}
-
-button{
-padding:12px 25px;
-border:none;
-background:#ff5c8a;
-color:white;
-border-radius:10px;
-font-size:16px;
-cursor:pointer;
-}
-
-button:hover{
-background:#ff3d73;
-}
-
-#letter{
-display:none;
-animation:fade .8s;
-}
-
-@keyframes fade{
-from{opacity:0;transform:translateY(20px);}
-to{opacity:1;transform:translateY(0);}
-}
-</style>
-
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<div class="card" id="login">
+<canvas id="sakura"></canvas>
 
-<h1>👑 Princess Only 👑</h1>
+<audio id="bgm" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
 
-<p>Masukin password dulu yaa ✨</p>
+<!-- LOGIN -->
 
-<input id="pw" type="password" placeholder="Password">
+<section id="loginPage" class="page active">
 
-<br>
+    <div class="castle">
 
-<button onclick="cek()">Masuk</button>
+        <h3>Kingdom of Lembayung</h3>
+
+        <h1>👑 Princess Lembayung 👑</h1>
+
+        <p>
+
+            Kerajaan sedang memastikan...
+
+            bahwa yang masuk benar-benar
+
+            Princess Lembayung.
+
+        </p>
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Masukkan Password">
+
+        <button id="loginBtn">
+
+            Masuk ke Kerajaan
+
+        </button>
+
+        <small id="hint"></small>
+
+    </div>
+
+</section>
+
+<!-- GATE -->
+
+<section id="gatePage" class="page">
+
+    <div class="gateContainer">
+
+        <div class="gate leftGate"></div>
+
+        <div class="gate rightGate"></div>
+
+        <div class="gateText">
+
+            <h1>
+
+                Selamat Datang,
+
+                Princess Lembayung 👑
+
+            </h1>
+
+            <p>
+
+                Gerbang kerajaan sedang dibuka...
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ENVELOPE -->
+
+<section id="envelopePage" class="page">
+
+    <div class="envelopeBox">
+
+        <h2>
+
+            💌 Surat Kerajaan
+
+        </h2>
+
+        <p>
+
+            Ada sepucuk surat
+
+            dari salah satu rakyat.
+
+        </p>
+
+        <div id="envelope">
+
+            ✉️
+
+        </div>
+
+        <span>
+
+            Ketuk amplopnya.
+
+        </span>
+
+    </div>
+
+</section>
+
+<!-- LETTER -->
+
+<section id="letterPage" class="page">
+
+<div class="letter">
+
+<h2>
+
+Untuk Princess Lembayung 👑
+
+</h2>
+
+<div id="typingText"></div>
+
+<button id="continueBtn">
+
+Lanjut →
+
+</button>
 
 </div>
 
-<div class="card" id="letter">
+</section>
 
-<h1>💌 Hai Princess</h1>
+<!-- EASTER -->
 
-<p>
-Sebenernya surat ini ga penting-penting amat sih...
-</p>
+<section id="eggPage" class="page">
 
-<p>
-Gua cuma mau bilang makasih karena tanpa sadar lu sering bikin hari gua lebih seru.
-</p>
+<div class="questionBox">
 
-<p>
-Lu tuh lucu, random, nyebelin dikit... tapi ya justru itu yang bikin seru wkwkwk.
-</p>
+<h1>
 
-<p>
-Semoga senyum lu hari ini ga ilang yaa.
-Karena kalo princess lagi senyum, rakyat ikut seneng. 👑✨
-</p>
+Princess tadi senyum ga?
 
-<p>
-Dari rakyat favoritmu.
-</p>
+</h1>
 
-❤️
+<div class="buttons">
+
+<button id="yesBtn">
+
+🙂 Iya
+
+</button>
+
+<button id="noBtn">
+
+🙄 Engga
+
+</button>
 
 </div>
 
-<script>
+</div>
 
-function cek(){
+</section>
 
-let pass=document.getElementById("pw").value;
+<!-- ACHIEVEMENT -->
 
-if(pass=="princess"){
+<section id="achievementPage" class="page">
 
-document.getElementById("login").style.display="none";
-document.getElementById("letter").style.display="block";
+<div class="achievement">
 
-}else{
+🏆
 
-alert("Password salah 😤");
+<h1>
 
-}
+Achievement Unlocked
 
-}
+</h1>
 
-</script>
+<p>
+
+Princess Lembayung
+
+berhasil tersenyum.
+
+</p>
+
+<button id="secretBtn">
+
+Satu lagi...
+
+</button>
+
+</div>
+
+</section>
+
+<!-- SECRET -->
+
+<section id="secretPage" class="page">
+
+<div class="secret">
+
+<h2>
+
+🤍
+
+</h2>
+
+<p id="secretText"></p>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
 
 </body>
+
   </html>
