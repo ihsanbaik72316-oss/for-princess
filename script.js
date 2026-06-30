@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', () => {
 document.getElementById('btn-login').addEventListener('click', () => {
     const pw = passwordInput.value.trim();
     // Kamu bisa ganti password-nya di sini sesukamu
-    if (pw.toLowerCase() === 'ondel ondel') {
+    if (pw.toLowerCase() === 'boneka mampang') {
         music.play().catch(e => console.log("Audio play deferred"));
         switchScreen('screen-login', 'screen-gate');
         
