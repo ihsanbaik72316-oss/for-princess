@@ -85,30 +85,19 @@ document.getElementById('envelope').addEventListener('click', function() {
 
 // 5. Letter Typewriter Effect
 const letterParagraphs = [
-    "Hai Princess Lembayung.\n",
-    "Sebenernya surat ini ga dibuat karena ada acara khusus.",
-    "Ga juga karena hari spesial.\n",
-    "Gua cuma kepikiran...",
-    "Kayaknya ada beberapa hal yang pengen gua ucapin.",
-    "Walaupun sederhana.\n",
-    "Makasih ya. Makasih karena udah hadir.",
-    "Mungkin buat lu... kehadiran lu biasa aja.",
-    "Tapi tanpa sadar... hari-hari gua jadi lebih berwarna sejak kenal sama lu.\n",
-    "Kadang cuma ngobrol bentar.",
-    "Kadang becanda random.",
-    "Kadang saling ganggu.",
-    "Kadang cuma kirim meme ga jelas.",
-    "Tapi anehnya... itu cukup bikin hari gua lebih seru.\n",
-    "Makasih juga... karena udah jadi diri lu sendiri.",
-    "Karena menurut gua... justru sifat lu yang random, ceria, kadang nyebelin dikit, dan suka bikin orang ketawa... itu yang bikin lu beda.\n",
-    "Semoga semua hal baik selalu dateng ke hidup lu.",
-    "Semoga apa pun yang lagi lu perjuangin bisa berhasil.",
-    "Semoga kalau lagi capek... selalu ada alasan buat senyum lagi.\n",
-    "Dan semoga... Princess Lembayung selalu diperlakukan dengan baik.",
-    "Karena menurut gua... Princess memang pantas diperlakukan dengan baik.\n",
-    "Dan terakhir... Makasih ya. Udah hadir.",
-    "Mungkin lu ga sadar. Tapi kehadiran lu bikin beberapa hari seseorang jadi lebih indah.\n",
-    "Dari salah satu rakyat."
+    "Haloo Lembayuuungg... ✨\n",
+    "Gua cuma mau bilang makasih banyak buat semuanya. Gua bener-bener ga nyangka kita bakal bisa temenan sedeket ini.",
+    "Dari yang awalnya gua kira lu cuma mau curhat, sampai akhirnya lu jadi orang yang masuk ke second account gua.\n",
+    "Gua juga ga expect bakal ketemu cewe yang sefrekuensi begini. Yang sabar banget kalau gua lagi mode iseng, yang selalu bisa bikin gua ketawa ngakak, dan selalu nanggepin yappingan gua yang agak laen wkwk.\n",
+    "Jujur, ngobrol sama lu itu seru banget! Apalagi pas lagi gibah bareng wkwk. Lu selalu bisa diajak ngobrolin apa aja dan terbukti ampuh bikin mood gua langsung naik drastis.",
+    "Kalau gua ga ketemu lu, gua gabakal tahu tuh yang namanya typing huruf kecil semua, typing 'hmmzz', atau typing 'stres tapi ok' wkwk.\n",
+    "Walaupun lu orangnya cerewet, ngeselin, kadang pemarah, kecanduan video JJ, dan suka ngehayal (apalagi kalau udah velocity cute kayak boneka mampang 😭), tapi gua suka kok!\n",
+    "Oya, gua mau minta maaf ya kalau selama ini sering bikin lu marah, bad mood, atau kalau ada ketikan gua yang sempat nyakitin hati lu. IM SORRY BANGET, maafin ya Princess... 🙏👑\n",
+    "Btw, kita masih ada 3 tahun lagi di Al-Kahfi. Jujur gua males banget bayangin PETA, mukhoyyam, LDK, dan kawan-kawannya.",
+    "Tapi kayaknya kalau ngelewatin itu bareng lu lagi, gua bakal semangat 10000% (apalagi kalau disemangatin terus wkwk).\n",
+    "Semoga nanti pas Nevastra kedatangan anak baru, kita tetep bisa kayak gini ya. Tenang aja, gua bakal tetep stay dan gabakal kemana-mana.",
+    "Udah ah, kepanjangan nanti lu pegel bacanya wkwk.\n",
+    "Dah, sekian dari polisi kecilmu. Bye! 🌟"
 ];
 
 function startTypewriter() {
