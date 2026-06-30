@@ -3,237 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Princess Lembayung 👑</title>
-
+    <title>A Letter for Princess Lembayung</title>
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<canvas id="sakura"></canvas>
+    <audio id="bg-music" src="music.mp3" loop></audio>
 
-<audio id="bgm" loop>
-    <source src="music.mp3" type="audio/mpeg">
-</audio>
-
-<!-- LOGIN -->
-
-<section id="loginPage" class="page active">
-
-    <div class="castle">
-
-        <h3>Kingdom of Lembayung</h3>
-
-        <h1>👑 Princess Lembayung 👑</h1>
-
-        <p>
-
-            Kerajaan sedang memastikan...
-
-            bahwa yang masuk benar-benar
-
-            Princess Lembayung.
-
-        </p>
-
-        <input
-            type="password"
-            id="password"
-            placeholder="Masukkan Password">
-
-        <button id="loginBtn">
-
-            Masuk ke Kerajaan
-
-        </button>
-
-        <small id="hint"></small>
-
-    </div>
-
-</section>
-
-<!-- GATE -->
-
-<section id="gatePage" class="page">
-
-    <div class="gateContainer">
-
-        <div class="gate leftGate"></div>
-
-        <div class="gate rightGate"></div>
-
-        <div class="gateText">
-
-            <h1>
-
-                Selamat Datang,
-
-                Princess Lembayung 👑
-
-            </h1>
-
-            <p>
-
-                Gerbang kerajaan sedang dibuka...
-
-            </p>
-
+    <div id="screen-loading" class="screen active">
+        <div class="loader-content">
+            <div class="sakura-loader">🌸</div>
+            <h2 id="loading-text">Kingdom of Lembayung...</h2>
+            <p class="sub-loading">Initializing...</p>
         </div>
-
     </div>
 
-</section>
-
-<!-- ENVELOPE -->
-
-<section id="envelopePage" class="page">
-
-    <div class="envelopeBox">
-
-        <h2>
-
-            💌 Surat Kerajaan
-
-        </h2>
-
-        <p>
-
-            Ada sepucuk surat
-
-            dari salah satu rakyat.
-
-        </p>
-
-        <div id="envelope">
-
-            ✉️
-
+    <div id="screen-login" class="screen">
+        <div class="card">
+            <div class="icon">👑</div>
+            <h2>Kingdom of Lembayung</h2>
+            <p>Kerajaan sedang memastikan bahwa yang masuk benar-benar Princess Lembayung.</p>
+            <input type="password" id="password-input" placeholder="Masukkan Password...">
+            <button id="btn-login">Enter the Kingdom</button>
+            <p id="login-hint" class="hint"></p>
         </div>
-
-        <span>
-
-            Ketuk amplopnya.
-
-        </span>
-
     </div>
 
-</section>
+    <div id="screen-gate" class="screen">
+        <div class="gate-container">
+            <div class="gate-left"></div>
+            <div class="gate-right"></div>
+            <div class="gate-text">
+                <span>✨</span>
+                <h1>Welcome Home,<br>Princess Lembayung</h1>
+            </div>
+        </div>
+    </div>
 
-<!-- LETTER -->
+    <div id="screen-garden" class="screen">
+        <div class="sakura-container" id="sakura-bg"></div>
+        <div id="envelope-wrapper" class="envelope-wrapper">
+            <div class="envelope" id="envelope">
+                <div class="flap"></div>
+                <div class="pocket"></div>
+                <div class="letter-preview"></div>
+                <div class="envelope-text">Untuk Yang Mulia<br>Princess Lembayung 👑</div>
+            </div>
+            <p class="envelope-hint">Salah satu rakyat meninggalkan surat. Klik amplop untuk membuka ✨</p>
+        </div>
+    </div>
 
-<section id="letterPage" class="page">
+    <div id="screen-letter" class="screen">
+        <div class="letter-box">
+            <div class="scroll-content" id="typewriter-text"></div>
+            <button id="btn-continue" class="hidden">Continue</button>
+        </div>
+    </div>
 
-<div class="letter">
+    <div id="screen-dark" class="screen-dark">
+        <h1 id="dark-text">Eh bentar...</h1>
+    </div>
 
-<h2>
+    <div id="screen-easter" class="screen">
+        <div class="card">
+            <h2>Princess tadi senyum ga? 😊</h2>
+            <div class="btn-group">
+                <button id="btn-yes">🙂 Iya</button>
+                <button id="btn-no">🙄 Engga</button>
+            </div>
+        </div>
+    </div>
 
-Untuk Princess Lembayung 👑
+    <div id="screen-achievement" class="screen">
+        <div class="achievement-card">
+            <div class="trophy">🏆</div>
+            <h3>Achievement Unlocked</h3>
+            <h2>Princess Lembayung Berhasil Tersenyum</h2>
+            <p class="points">+100 Happiness ✨</p>
+            <button id="btn-secret">Satu lagi... 🤍</button>
+        </div>
+    </div>
 
-</h2>
+    <div id="screen-secret" class="screen">
+        <div class="secret-content" id="secret-text"></div>
+    </div>
 
-<div id="typingText"></div>
+    <div id="screen-ending" class="screen">
+        <div class="ending-box">
+            <h1>See you again,<br>Princess Lembayung 👑</h1>
+            <p class="quote">Keep smiling, because this kingdom looks brighter when its Princess smiles.</p>
+            <button id="btn-leave">Leave the Kingdom</button>
+        </div>
+    </div>
 
-<button id="continueBtn">
+    <div id="screen-final" class="screen-final">
+        <div class="final-content">
+            <div class="final-crown">👑</div>
+            <h2>Kingdom of Lembayung</h2>
+            <p class="version">Version 1.0</p>
+            <p class="credit">Made with a lot of effort for one Princess.</p>
+        </div>
+    </div>
 
-Lanjut →
-
-</button>
-
-</div>
-
-</section>
-
-<!-- EASTER -->
-
-<section id="eggPage" class="page">
-
-<div class="questionBox">
-
-<h1>
-
-Princess tadi senyum ga?
-
-</h1>
-
-<div class="buttons">
-
-<button id="yesBtn">
-
-🙂 Iya
-
-</button>
-
-<button id="noBtn">
-
-🙄 Engga
-
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ACHIEVEMENT -->
-
-<section id="achievementPage" class="page">
-
-<div class="achievement">
-
-🏆
-
-<h1>
-
-Achievement Unlocked
-
-</h1>
-
-<p>
-
-Princess Lembayung
-
-berhasil tersenyum.
-
-</p>
-
-<button id="secretBtn">
-
-Satu lagi...
-
-</button>
-
-</div>
-
-</section>
-
-<!-- SECRET -->
-
-<section id="secretPage" class="page">
-
-<div class="secret">
-
-<h2>
-
-🤍
-
-</h2>
-
-<p id="secretText"></p>
-
-</div>
-
-</section>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
-
-  </html>
+            </html>
