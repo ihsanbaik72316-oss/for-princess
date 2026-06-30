@@ -97,7 +97,7 @@ const letterParagraphs = [
     "Tapi kayaknya kalau ngelewatin itu bareng lu lagi, gua bakal semangat 10000% (apalagi kalau disemangatin terus wkwk).\n",
     "Semoga nanti pas Nevastra kedatangan anak baru, kita tetep bisa kayak gini ya. Tenang aja, gua bakal tetep stay dan gabakal kemana-mana.",
     "Udah ah, kepanjangan nanti lu pegel bacanya wkwk.\n",
-    "Dah, sekian dari polisi kecilmu. Bye! 🌟"
+    "Dah, sekian dari polisi kecil. Bye! 🌟"
 ];
 
 function startTypewriter() {
