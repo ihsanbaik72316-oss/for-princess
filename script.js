@@ -166,7 +166,7 @@ document.getElementById('btn-yes').addEventListener('click', () => {
 const secretParagraphs = [
     "Sebenernya...",
     "Surat ini... ga dikirim sama kerajaan.",
-    "Yang bikin... cuma satu rakyat.",
+    "Yang bikin... cuma seseorang.",
     "Yang pengen ngucapin... makasih.",
     "Karena Princess Lembayung... udah hadir."
 ];
