@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Princess 👑</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ffd6e7,#fff7fb);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+width:90%;
+max-width:450px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+h1{
+color:#ff5c8a;
+}
+
+input{
+padding:12px;
+width:80%;
+border-radius:10px;
+border:2px solid #ffc2d7;
+margin:15px 0;
+}
+
+button{
+padding:12px 25px;
+border:none;
+background:#ff5c8a;
+color:white;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff3d73;
+}
+
+#letter{
+display:none;
+animation:fade .8s;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+</style>
+
+</head>
+<body>
+
+<div class="card" id="login">
+
+<h1>👑 Princess Only 👑</h1>
+
+<p>Masukin password dulu yaa ✨</p>
+
+<input id="pw" type="password" placeholder="Password">
+
+<br>
+
+<button onclick="cek()">Masuk</button>
+
+</div>
+
+<div class="card" id="letter">
+
+<h1>💌 Hai Princess</h1>
+
+<p>
+Sebenernya surat ini ga penting-penting amat sih...
+</p>
+
+<p>
+Gua cuma mau bilang makasih karena tanpa sadar lu sering bikin hari gua lebih seru.
+</p>
+
+<p>
+Lu tuh lucu, random, nyebelin dikit... tapi ya justru itu yang bikin seru wkwkwk.
+</p>
+
+<p>
+Semoga senyum lu hari ini ga ilang yaa.
+Karena kalo princess lagi senyum, rakyat ikut seneng. 👑✨
+</p>
+
+<p>
+Dari rakyat favoritmu.
+</p>
+
+❤️
+
+</div>
+
+<script>
+
+function cek(){
+
+let pass=document.getElementById("pw").value;
+
+if(pass=="princess"){
+
+document.getElementById("login").style.display="none";
+document.getElementById("letter").style.display="block";
+
+}else{
+
+alert("Password salah 😤");
+
+}
+
+}
+
+</script>
+
+</body>
+  </html>
