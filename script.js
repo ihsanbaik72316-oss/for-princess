@@ -140,10 +140,19 @@ btnContinue.addEventListener('click', () => {
 
 // 7. Easter Egg (Runaway Button "Engga")
 function moveButton() {
-    const x = Math.random() * (window.innerWidth - btnNo['offsetWidth'] - 40);
-    const y = Math.random() * 100 - 50; // bergerak di area tombol
-    btnNo.style.left = `${x}px`;
-    btnNo.style.top = `${y}px`;
+    if (btnNo.style.position !== 'absolute') {
+        btnNo.style.position = 'absolute';
+    }
+    
+    const card = btnNo.closest('.card');
+    const maxX = card.clientWidth - btnNo.offsetWidth - 20;
+    const maxY = card.clientHeight - btnNo.offsetHeight - 40;
+    
+    const randomX = Math.max(10, Math.random() * maxX);
+    const randomY = Math.max(10, Math.random() * maxY);
+    
+    btnNo.style.left = `${randomX}px`;
+    btnNo.style.top = `${randomY}px`;
 }
 btnNo.addEventListener('mouseenter', moveButton);
 btnNo.addEventListener('click', moveButton);
