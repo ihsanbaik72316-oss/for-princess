@@ -287,3 +287,100 @@ button:hover { transform: scale(1.05); }
 .final-crown { font-size: 3rem; margin-bottom: 10px; }
 .version { font-size: 0.8rem; color: #999; margin: 5px 0 20px; }
 .credit { font-size: 0.9rem; color: #666; font-style: italic; }
+
+
+/* Fix the original falling-petal animation declaration. */
+.petal { animation-name: fall; animation-timing-function: linear; animation-iteration-count: infinite; }
+
+/* Chapter selection */
+#screen-chapters {
+    background: radial-gradient(circle at top, #fff4fb 0%, #f7d9ed 48%, #d9d8ff 100%);
+    padding: 22px;
+    overflow-y: auto;
+}
+.chapter-wrap { width: 100%; max-width: 480px; text-align: center; }
+.chapter-heading { color: #8e477d; font-family: Georgia, serif; font-size: 1.65rem; font-weight: bold; margin-bottom: 8px; }
+.chapter-subtitle { color: #795f7d; margin-bottom: 22px; }
+.chapter-card {
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    width: 100%; margin: 13px 0; padding: 22px 20px;
+    background: rgba(255,255,255,.91); color: #684a68;
+    border: 1px solid rgba(255,255,255,.9); border-radius: 22px;
+    box-shadow: 0 10px 28px rgba(120,75,130,.13); text-align: center;
+}
+.chapter-card.birthday-choice { background: linear-gradient(135deg,#fff 0%,#fff0f5 100%); }
+.chapter-emoji { font-size: 2rem; }
+.chapter-title { font-family: Georgia,serif; font-size: 1.3rem; font-weight: bold; }
+.chapter-desc { font-size: .9rem; line-height: 1.5; color: #806e80; font-weight: normal; }
+.chapter-cta { margin-top: 5px; color: #bd679a; font-size: .9rem; font-weight: bold; }
+.chapter-footnote { color: #876d86; font-size: .8rem; margin-top: 18px; }
+
+/* Birthday chapter */
+.birthday-screen {
+    padding: 20px; overflow-y: auto;
+    background: linear-gradient(145deg,#fff1f5 0%,#f8d8ec 48%,#e4e0ff 100%);
+}
+.birthday-panel, .birthday-letter {
+    width: 100%; max-width: 510px; max-height: 92vh; overflow-y: auto;
+    padding: 30px 25px; border-radius: 25px; text-align: center;
+    background: rgba(255,255,255,.91); color: #59465d;
+    box-shadow: 0 14px 38px rgba(120,75,130,.16);
+    border: 1px solid rgba(255,255,255,.9);
+}
+.birthday-kicker { color: #c078a5; font-size: .68rem; font-weight: bold; letter-spacing: 2px; margin-bottom: 18px; }
+.birthday-big-emoji { font-size: 3.6rem; margin: 5px 0 12px; }
+.birthday-panel h1, .birthday-letter h1 { font-family: Georgia,serif; color: #985b89; font-size: 2rem; margin-bottom: 14px; }
+.birthday-panel h2 { color: #a75d91; font-family: Georgia,serif; font-size: 1.35rem; line-height: 1.4; margin: 18px 0; }
+.birthday-lead { font-size: 1.05rem; line-height: 1.6; }
+.birthday-copy { color: #756678; line-height: 1.7; margin: 13px 0; }
+.birthday-panel button, .birthday-letter button { margin-top: 20px; }
+.gift-row { display: flex; gap: 10px; margin: 20px 0; }
+.gift-item {
+    flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 7px;
+    padding: 14px 8px; background: #fff4f8; border-radius: 16px;
+}
+.gift-item span { font-size: 2rem; }
+.gift-item b { color: #a45e91; font-size: .9rem; }
+.gift-item small { color: #8b7b8b; font-size: .72rem; line-height: 1.35; }
+.cake-art { font-size: 5rem; margin: 8px 0; animation: cakeFloat 2.4s ease-in-out infinite; }
+@keyframes cakeFloat { 50% { transform: translateY(-8px); } }
+.wish-note { background: #fff5f9; padding: 13px; border-radius: 14px; color: #886d83; font-size: .9rem; line-height: 1.6; }
+.birthday-letter { text-align: left; }
+.birthday-letter p { color: #685d6c; line-height: 1.75; margin: 14px 0; }
+.birthday-letter .birthday-kicker { text-align: center; }
+.birthday-letter h1 { text-align: center; font-size: 1.8rem; }
+.birthday-signoff { text-align: right; color: #a05e8e !important; font-style: italic; }
+.birthday-letter button { display: block; margin: 20px auto 0; }
+.birthday-ending-panel { background: rgba(255,255,255,.94); }
+.final-back { margin-top: 28px; background: linear-gradient(135deg,#c9a1d7,#f2b7d5); font-size: .8rem; }
+
+@media (max-width: 390px) {
+    .birthday-panel, .birthday-letter { padding: 24px 18px; }
+    .gift-row { gap: 6px; }
+    .gift-item { padding: 12px 5px; }
+    .gift-item b { font-size: .78rem; }
+    .gift-item small { font-size: .65rem; }
+}
+
+
+/* Birthday surprise reveal */
+.surprise-reveal {
+    display: none;
+    margin-top: 22px;
+    padding: 20px 16px;
+    border-radius: 18px;
+    background: #fff4f8;
+    animation: popIn .55s ease both;
+}
+.surprise-reveal.show { display: block; }
+.surprise-reveal h2 {
+    color: #a75d91;
+    font-family: Georgia,serif;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin: 10px 0;
+}
+.surprise-reveal p { color: #756678; line-height: 1.65; margin: 10px 0; }
+.surprise-stars { font-size: 1.5rem; }
+.surprise-small { font-size: .86rem; font-style: italic; }
+    
