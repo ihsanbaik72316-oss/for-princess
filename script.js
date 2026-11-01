@@ -46,8 +46,7 @@ document.getElementById('btn-login').addEventListener('click', () => {
         // Gate Opening Animation
         setTimeout(() => {
             document.getElementById('screen-gate').classList.add('gate-open');
-            switchScreen('screen-gate', 'screen-garden', 2000);
-            startSakura();
+            switchScreen('screen-gate', 'screen-chapters', 2000);
         }, 1500);
 
     } else {
@@ -56,6 +55,47 @@ document.getElementById('btn-login').addEventListener('click', () => {
         else if (loginAttempts === 2) loginHint.innerText = "Princess lupa passwordnya sendiri? 🤨";
         else loginHint.innerText = "Gapapa... rakyat juga sering lupa kok. 😭";
     }
+});
+
+
+// Chapter selection: both stories stay available after login.
+document.getElementById('btn-original-chapter').addEventListener('click', () => {
+    switchScreen('screen-chapters', 'screen-garden');
+    startSakura();
+});
+
+document.getElementById('btn-birthday-chapter').addEventListener('click', () => {
+    switchScreen('screen-chapters', 'screen-birthday-news');
+});
+
+function birthdayGo(fromId, toId) {
+    switchScreen(fromId, toId);
+}
+
+document.getElementById('btn-birthday-news-next').addEventListener('click', () => {
+    birthdayGo('screen-birthday-news', 'screen-birthday-gifts');
+});
+document.getElementById('btn-birthday-gifts-next').addEventListener('click', () => {
+    birthdayGo('screen-birthday-gifts', 'screen-birthday-wish');
+});
+document.getElementById('btn-make-wish').addEventListener('click', () => {
+    birthdayGo('screen-birthday-wish', 'screen-birthday-surprise');
+});
+document.getElementById('btn-reveal-surprise').addEventListener('click', () => {
+    document.getElementById('surprise-reveal').classList.add('show');
+    document.getElementById('btn-reveal-surprise').classList.add('hidden');
+});
+document.getElementById('btn-surprise-finish').addEventListener('click', () => {
+    birthdayGo('screen-birthday-surprise', 'screen-birthday-ending');
+});
+document.getElementById('btn-birthday-finish').addEventListener('click', () => {
+    birthdayGo('screen-birthday-ending', 'screen-final');
+});
+document.getElementById('btn-back-chapters').addEventListener('click', () => {
+    document.getElementById('screen-final').classList.remove('active');
+    document.getElementById('screen-chapters').classList.add('active');
+    music.volume = 1;
+    music.play().catch(() => {});
 });
 
 // 3. Sakura Effect
@@ -211,3 +251,4 @@ document.getElementById('btn-leave').addEventListener('click', () => {
         }
     }, 1500);
 });
+    
