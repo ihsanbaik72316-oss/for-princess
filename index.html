@@ -40,6 +40,27 @@
         </div>
     </div>
 
+
+    <div id="screen-chapters" class="screen">
+        <div class="chapter-wrap">
+            <div class="chapter-heading">👑 Kingdom of Lembayung</div>
+            <p class="chapter-subtitle">Satu kerajaan, dua cerita kecil.</p>
+            <button id="btn-original-chapter" class="chapter-card">
+                <span class="chapter-emoji">📜</span>
+                <span class="chapter-title">The Original Story</span>
+                <span class="chapter-desc">Cerita dan surat yang pernah ditinggalkan rakyat kecil.</span>
+                <span class="chapter-cta">Buka cerita lama →</span>
+            </button>
+            <button id="btn-birthday-chapter" class="chapter-card birthday-choice">
+                <span class="chapter-emoji">🎂</span>
+                <span class="chapter-title">The Birthday Edition</span>
+                <span class="chapter-desc">Satu chapter baru khusus untuk hari spesial Princess.</span>
+                <span class="chapter-cta">Buka kejutan ulang tahun →</span>
+            </button>
+            <p class="chapter-footnote">Princess bebas memilih. Cerita lama tetap tersimpan di sini. 🤍</p>
+        </div>
+    </div>
+
     <div id="screen-garden" class="screen">
         <div class="sakura-container" id="sakura-bg"></div>
         <div id="envelope-wrapper" class="envelope-wrapper">
@@ -57,6 +78,73 @@
         <div class="letter-box">
             <div class="scroll-content" id="typewriter-text"></div>
             <button id="btn-continue" class="hidden">Continue</button>
+        </div>
+    </div>
+
+
+    <!-- Birthday Edition -->
+    <div id="screen-birthday-news" class="screen birthday-screen">
+        <div class="birthday-panel">
+            <div class="birthday-kicker">SPECIAL KINGDOM ANNOUNCEMENT</div>
+            <div class="birthday-big-emoji">📢</div>
+            <h1>Breaking News!</h1>
+            <p class="birthday-lead">Hari ini, ada satu orang yang pantas jadi pusat perhatian.</p>
+            <p class="birthday-copy">Seluruh kerajaan ingin menyampaikan satu hal:</p>
+            <h2>HAPPY BIRTHDAY, PRINCESS LEMBAYUNG! 🎉</h2>
+            <button id="btn-birthday-news-next">Lanjutkan ✨</button>
+        </div>
+    </div>
+
+    <div id="screen-birthday-gifts" class="screen birthday-screen">
+        <div class="birthday-panel">
+            <div class="birthday-kicker">A LITTLE PRESENT FROM THE KINGDOM</div>
+            <div class="gift-row">
+                <div class="gift-item"><span>🎁</span><b>Gift #1</b><small>More happy days</small></div>
+                <div class="gift-item"><span>🌷</span><b>Gift #2</b><small>Good people around you</small></div>
+                <div class="gift-item"><span>⭐</span><b>Gift #3</b><small>Dreams coming true</small></div>
+            </div>
+            <h2>Tiga hadiah kecil, satu doa besar.</h2>
+            <p class="birthday-copy">Semoga tahun ini dipenuhi hal-hal baik, kesempatan baru, dan alasan sederhana untuk tetap bahagia.</p>
+            <button id="btn-birthday-gifts-next">Masih ada satu lagi →</button>
+        </div>
+    </div>
+
+    <div id="screen-birthday-wish" class="screen birthday-screen">
+        <div class="birthday-panel cake-panel">
+            <div class="birthday-kicker">MAKE A WISH</div>
+            <div class="cake-art">🎂</div>
+            <h1>One little wish...</h1>
+            <p class="birthday-copy">Sebelum lanjut, coba simpan satu harapan baik buat tahun ini.</p>
+            <p class="wish-note">Nggak harus diceritain ke siapa-siapa. Cukup jadi doa kecil dari Princess sendiri. 🤍</p>
+            <button id="btn-make-wish">Wish made! ✨</button>
+        </div>
+    </div>
+
+
+    <div id="screen-birthday-surprise" class="screen birthday-screen">
+        <div class="birthday-panel surprise-panel">
+            <div class="birthday-kicker">A TINY SURPRISE</div>
+            <div class="birthday-big-emoji">🎀</div>
+            <h1>One last little thing...</h1>
+            <p class="birthday-copy">Katanya ulang tahun harus ada kejutan. Jadi, ini satu kejutan kecil dari kerajaan.</p>
+            <button id="btn-reveal-surprise">Open your surprise 🎁</button>
+            <div id="surprise-reveal" class="surprise-reveal">
+                <div class="surprise-stars">✨ 🌷 ✨</div>
+                <h2>Officially today's main character!</h2>
+                <p>Semoga ada banyak hal sederhana yang bikin lu bilang, “wah, hari ini menyenangkan juga.”</p>
+                <p class="surprise-small">P.S. Jangan lupa menikmati hari lu sendiri, Princess. 🤍</p>
+                <button id="btn-surprise-finish">Back to the Kingdom</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="screen-birthday-ending" class="screen birthday-screen">
+        <div class="birthday-panel birthday-ending-panel">
+            <div class="birthday-big-emoji">👑</div>
+            <h1>That's your day, Princess!</h1>
+            <p class="birthday-copy">Semoga tahun ini jadi chapter yang menyenangkan, penuh hal baru, dan punya banyak momen yang layak dikenang.</p>
+            <p class="birthday-copy">Enjoy your special day. You deserve a little extra happiness today. ✨</p>
+            <button id="btn-birthday-finish">Back to the Kingdom</button>
         </div>
     </div>
 
@@ -102,6 +190,7 @@
             <h2>Kingdom of Lembayung</h2>
             <p class="version">Version 1.0</p>
             <p class="credit">Made with a lot of effort for one Princess.</p>
+            <button id="btn-back-chapters" class="final-back">Back to chapter selection</button>
         </div>
     </div>
 
